@@ -38,6 +38,17 @@ describe(CD) do
       expect(CD.find(test_cd.id())).to(eq(test_cd))
     end
   end
+
+  describe('.find_by_artist') do
+    it('returns a CD by its artist_ID number') do
+      test_cd = Aladdin_Sane()
+      test_cd.save()
+      test_cd2 = Low()
+      test_cd2.save()
+      expect(CD.find_by_artist(test_cd.artist_id())).
+        to(eq([test_cd, test_cd2]))
+    end
+  end
 end
 
 def Aladdin_Sane

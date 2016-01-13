@@ -33,11 +33,21 @@ class CD
 
   def self.find(identification)
     found_cd = nil
-    @@cd_list.each do |cd|
+    @@cd_list.each() do |cd|
       if cd.id() == identification
         found_cd = cd
       end
     end
     found_cd
+  end
+
+  def self.find_by_artist(artist_identification)
+    found_cd_list = []
+    @@cd_list.each() do |cd|
+      if cd.artist_id() == artist_identification
+        found_cd_list.push(cd)
+      end
+    end
+    found_cd_list
   end
 end
