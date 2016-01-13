@@ -2,12 +2,24 @@ require('rspec')
 require('cd')
 
 describe(CD) do
+  before() do
+    CD.clear()
+  end
+
   describe('#initialize') do
     it('returns the title, artist_id, and id of the CD') do
       test_cd = Aladdin_Sane()
       expect(test_cd.title()).to(eq('Aladdin Sane'))
       expect(test_cd.artist_id()).to(eq(1))
       expect(test_cd.id()).to(eq(1))
+    end
+  end
+
+  describe('#save') do
+    it('saves a CD to the array') do
+      test_cd = Aladdin_Sane()
+      test_cd.save()
+      expect(CD.all()).to(eq([test_cd]))
     end
   end
 

@@ -19,7 +19,15 @@ class CD
     @id
   end
 
+  def save
+    @@cd_list.push(self)
+  end
+
   def self.all
     @@cd_list
+  end
+
+  def self.clear
+    @@cd_list = []
   end
 end
