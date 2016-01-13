@@ -28,8 +28,22 @@ describe(CD) do
       expect(CD.all()).to(eq([]))
     end
   end
+
+  describe('.find') do
+    it('returns a CD by its ID number') do
+      test_cd = Aladdin_Sane()
+      test_cd.save()
+      test_cd2 = Low()
+      test_cd2.save()
+      expect(CD.find(test_cd.id())).to(eq(test_cd))
+    end
+  end
 end
 
 def Aladdin_Sane
   CD.new('Aladdin Sane', 1)
+end
+
+def Low
+  CD.new('Low', 1)
 end

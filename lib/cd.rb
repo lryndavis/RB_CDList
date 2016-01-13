@@ -30,4 +30,14 @@ class CD
   def self.clear
     @@cd_list = []
   end
+
+  def self.find(identification)
+    found_cd = nil
+    @@cd_list.each do |cd|
+      if cd.id() == identification
+        found_cd = cd
+      end
+    end
+    found_cd
+  end
 end
