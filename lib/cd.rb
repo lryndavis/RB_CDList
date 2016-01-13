@@ -18,4 +18,8 @@ class CD
   def id
     @id
   end
+
+  def self.all
+    @@cd_list
+  end
 end

@@ -10,6 +10,12 @@ describe(CD) do
       expect(test_cd.id()).to(eq(1))
     end
   end
+
+  describe('.all') do
+    it('is empty at first') do
+      expect(CD.all()).to(eq([]))
+    end
+  end
 end
 
 def Aladdin_Sane
