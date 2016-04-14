@@ -1,8 +1,8 @@
-# Ruby CD Organizer 
+# Ruby CD Organizer
 
-By Lauryn Davis + Krystan Menne 
+By Lauryn Davis + Krystan Menne
 
-A Ruby/Sinatra app that manages allows a user to manage a CD collection. An exercise in creating methods for finding and retrieving individual objects; additional practice with integration testing. 
+A Ruby/Sinatra app that allows a user to manage a CD collection. An exercise in creating methods for finding and retrieving individual objects; additional practice with integration testing. 
 
 ####Technologies Used
 
@@ -20,6 +20,6 @@ A Ruby/Sinatra app that manages allows a user to manage a CD collection. An exer
 `bundle install`
 `ruby app.rb`
 
-License
+#### License
 
 This software is licensed under the MIT license.
